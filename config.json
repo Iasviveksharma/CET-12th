@@ -1,0 +1,33 @@
+{
+  "subjects": [
+    {
+      "id": "science",
+      "name": "Science",
+      "folder": "science",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+  "id": "history",
+  "name": "History",
+  "folder": "history",
+  "sets": [
+    {
+      "id": 1,
+      "name": "Set 1",
+      "file": "set1.json"
+    }
+  ]
+}
+  ]
+}
