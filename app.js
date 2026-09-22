@@ -595,6 +595,25 @@ if (nextButton) {
 }
 
 /* ================================
+   PREVIOUS QUESTION
+   ================================ */
+
+const prevButton = $("quiz-prev-btn");
+
+if (prevButton) {
+    prevButton.addEventListener("click", () => {
+        if (currentQuestion > 0) {
+            currentQuestion--;
+            showQuestion();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    });
+}
+
+/* ================================
    RESULTS
    ================================ */
 
