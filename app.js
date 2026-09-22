@@ -112,44 +112,39 @@ async function loadQuestions(subject, set) {
             );
         }
 
-        const rawText =
-            await response.text();
+            const rawText = await response.text();
 
-        if (!rawText.trim()) {
-            throw new Error(
-                `${subject.name} ${set.name} की JSON file खाली है।`
-            );
-        }
-
-        const data =
-            JSON.parse(rawText);
-
-        if (!Array.isArray(data)) {
-            throw new Error(
-                "JSON का format गलत है।"
-            );
-        }
-
-        if (data.length === 0) {
-            throw new Error(
-                `${subject.name} ${set.name} में कोई question नहीं है।`
-            );
+        let data = [];
+        if (rawText.trim()) {
+            try {
+                const parsed = JSON.parse(rawText);
+                if (Array.isArray(parsed)) {
+                    data = parsed;
+                }
+            } catch (e) {
+                data = [];
+            }
         }
 
         questions = data;
 
         startQuiz();
 
-    } catch (error) {
-
-        console.error(
-            "CET-12th Quiz Error:",
-            error
-        );
-
-        showLoadError(
-            error.message
-        );
+        } catch (error) {
+        removeClass(quizScreen, "hidden");
+        addClass(setSelection, "hidden");
+        const quizCard = document.querySelector(".quiz-question-card") || document.querySelector(".question-card") || quizScreen;
+        if (quizCard) {
+            quizCard.innerHTML = `
+                <div style="text-align:center; padding:40px 20px; background:#fff; border-radius:24px; box-shadow:0 4px 20px rgba(0,0,0,0.06); margin:20px auto; max-width:420px;">
+                    <div style="font-size:75px; margin-bottom:12px; line-height:1;">&#128054;</div>
+                    <h2 style="font-size:26px; color:#1e293b; margin:0 0 6px; font-weight:800;">Error 404</h2>
+                    <p style="font-size:16px; color:#64748b; font-weight:700; margin:0 0 12px;">There is nothing here!</p>
+                    <p style="font-size:14px; color:#94a3b8; margin:0 auto 24px; line-height:1.5;">Is set mein abhi questions add nahi kiye gaye hain.</p>
+                    <button onclick="location.reload()" type="button" style="background:#1982f6; color:#fff; border:none; padding:12px 26px; border-radius:16px; font-size:15px; font-weight:700; cursor:pointer;">← Go Back to Sets</button>
+                </div>
+            `;
+        }
     }
 }
 
@@ -207,17 +202,27 @@ function startQuiz() {
         scoreDisplay.textContent = "0.00";
     }
 
-    removeClass(
-        quizScreen,
-        "hidden"
-    );
+            removeClass(quizScreen, "hidden");
+        addClass(setSelection, "hidden");
+        addClass(resultScreen, "hidden");
 
-    addClass(
-        resultScreen,
-        "hidden"
-    );
+        if (!questions || questions.length === 0) {
+            const quizCard = document.querySelector(".quiz-question-card") || document.querySelector(".question-card") || quizScreen;
+            if (quizCard) {
+                quizCard.innerHTML = `
+                    <div style="text-align: center; padding: 40px 20px; background: #ffffff; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin: 20px auto; max-width: 420px;">
+                        <div style="font-size: 75px; margin-bottom: 12px; line-height: 1;">&#128054;</div>
+                        <h2 style="font-size: 26px; color: #1e293b; margin: 0 0 6px; font-weight: 800;">Error 404</h2>
+                        <p style="font-size: 16px; color: #64748b; font-weight: 700; margin: 0 0 12px;">There is nothing here!</p>
+                        <p style="font-size: 14px; color: #94a3b8; margin: 0 auto 24px; line-height: 1.5;">Is set mein abhi questions add nahi kiye gaye hain.</p>
+                        <button onclick="location.reload()" type="button" style="background: #1982f6; color: #ffffff; border: none; padding: 12px 26px; border-radius: 16px; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 14px rgba(25, 130, 246, 0.3);">← Go Back to Sets</button>
+                    </div>
+                `;
+            }
+            return;
+        }
 
-    showQuestion();
+        showQuestion();
 }
 
 /* ================================
