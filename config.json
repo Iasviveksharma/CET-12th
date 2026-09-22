@@ -17,17 +17,175 @@
         }
       ]
     },
+  {
+      "id": "history of rajasthan",
+      "name": "History Of Rajasthan",
+      "folder": "history of rajasthan",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
 {
-  "id": "history",
-  "name": "History",
-  "folder": "history",
-  "sets": [
-    {
-      "id": 1,
-      "name": "Set 1",
-      "file": "set1.json"
+      "id": "art & culture of rajasthan",
+      "name": "Art & Culture Of Rajasthan",
+      "folder": "art & culture of rajasthan",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+      "id": "geography of India",
+      "name": "Geography Of India",
+      "folder": "geography of India",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+      "id": "geography of rajasthan",
+      "name": "Geography Of Rajasthan",
+      "folder": "geography of rajasthan",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+      "id": "Indian political system with special reference to rajasthan",
+      "name": "Indian Political System With Special Reference To Rajasthan",
+      "folder": "Indian political system with special reference to rajasthan",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+      "id": "economy of rajasthan",
+      "name": "Economy Of Rajasthan",
+      "folder": "economy of rajasthan",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+      "id": "logical reasoning & mathematics",
+      "name": "Logical Reasoning & Mathematics",
+      "folder": "logical reasoning & mathematics",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+      "id": "current affairs",
+      "name": "Current Affairs",
+      "folder": "current affairs",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+      "id": "public health",
+      "name": "Public Health",
+      "folder": "public health",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
+    },
+{
+      "id": "computer knowledge",
+      "name": "Computer Knowledge",
+      "folder": "computer knowledge",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        },
+        {
+          "id": 2,
+          "name": "Set 2",
+          "file": "set2.json"
+        }
+      ]
     }
-  ]
-}
   ]
 }
