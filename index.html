@@ -75,6 +75,12 @@
 
         <div id="options-container" class="options-container"></div>
 
+<button id="hint-button" class="hint-button" type="button">💡 Show Hint</button>
+
+<div id="hint-box" class="hint-box hidden">
+  <p id="hint-text"></p>
+</div>
+
         <section id="feedback-box" class="feedback-box hidden">
           <div class="explanation-bar">
             <span class="explanation-bulb">💡</span>
@@ -96,8 +102,6 @@
         </div>
       </div>
 
-      <button id="hint-button" class="hint-button" type="button" style="display:none !important;">💡 Show Hint</button>
-      <div id="hint-box" class="hint-box hidden" style="display:none !important;"><p id="hint-text"></p></div>
     </section>
 
     <!-- RESULT SCREEN -->
@@ -182,8 +186,7 @@
       }
 
       if (topBackBtn) topBackBtn.addEventListener('click', goBackToSets);
-      if (bottomPrevBtn) bottomPrevBtn.addEventListener('click', goBackToSets);
-
+      
       // Adaptive Looping Capsule Engine (Max 10 Capsules)
       function updateCapsules() {
         if (!progressText || !capsulesContainer) return;
