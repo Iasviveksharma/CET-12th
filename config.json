@@ -186,6 +186,18 @@
           "file": "set2.json"
         }
       ]
+    },
+    {
+      "id": "For Check",
+      "name": "For Check",
+      "folder": "For Check",
+      "sets": [
+        {
+          "id": 1,
+          "name": "Set 1",
+          "file": "set1.json"
+        }
+      ]
     }
   ]
 }
